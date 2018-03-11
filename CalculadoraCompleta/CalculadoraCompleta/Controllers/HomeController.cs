@@ -18,6 +18,8 @@ namespace CalculadoraCompleta.Controllers
         [HttpPost]
         public ActionResult Index(string bt, string display)
         {
+
+
             return View();
         }
     }

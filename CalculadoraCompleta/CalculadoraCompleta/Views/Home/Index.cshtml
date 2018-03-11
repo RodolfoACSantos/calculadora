@@ -9,6 +9,12 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <style>
+       input[type="submit"]{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
     <div>
@@ -16,11 +22,11 @@
         <!-- envias as escolhas do utilizador para o servidor -->
         <!-- Esta linha de comentário é visivel no 'cliente' -->
         @* mas esta não é ...  *@
-        <form method="post" ;>
+        <form method="post" ;>  
             <table border="1">
                 <tr>
                     <td colspan="5">
-                        <input type="text" name="display" readonly />
+                        <input type="text" name="display" readonly /> @ViewBag.Display
                     </td>
                 </tr>
                 <tr>
@@ -70,8 +76,8 @@
                     <td>
                         <input type="submit" value="-" name="bt" />
                     </td>
-                    <td>
-                        <input type="submit" value="=" name="bt" />
+                    <td rowspan="2" > 
+                        <input type="submit" value="=" name="bt"/>
                     </td>
                 <tr>
                     <td colspan="2">
