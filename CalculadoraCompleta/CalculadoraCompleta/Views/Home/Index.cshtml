@@ -8,95 +8,92 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>Calculadora</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
     <style>
-       input[type="submit"]{
-            width: 100%;
-            height: 100%;
-            
-        }
+     
         table td {
             height: 30px;
         }
         #display {
             text-align: right;
+            height: 30px;
+            width:215px;
         }
-        
-
     </style>
 </head>
 <body>
     <div>
-        <h1 style="color:green;"> Caclculadora mais completa! </h1>
+        <h1 style="color:green;"> Calculadora mais completa! </h1>
         <!-- envias as escolhas do utilizador para o servidor -->
         <!-- Esta linha de comentário é visivel no 'cliente' -->
         @* mas esta não é ...  *@
         <form method="post" ;>  
-            <table border="1">
+            <table style="border-spacing:5px; border-collapse:collapse; border:1px solid green;">
                 <tr>
                     <td colspan="5">
-                        <input type="text" id="display" name="display" readonly value="@ViewBag.Display" /> 
+                        <input type="text" id="display" class="form-control" name="display" readonly value="@ViewBag.Display" /> 
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="submit" value="7" name="bt" />
+                        <input type="submit" value="7" name="bt" class="btn" style="width:40px; height:40px;"/>
                     </td>
                     <td>
-                        <input type="submit" value="8" name="bt" />
+                        <input type="submit" value="8" name="bt" class="btn" style="width:40px; height:40px;"/>
                     </td>
                     <td>
-                        <input type="submit" value="9" name="bt" />
+                        <input type="submit" value="9" name="bt" class="btn" style="width:40px; height:40px;"/>
                     </td>
                     <td>
-                        <input type="submit" value=":" name="bt" />
+                        <input type="submit" value=":" name="bt" class="btn" style="width:40px; height:40px;"/>
                     </td>
                     <td>
-                        <input type="submit" value="+/-" name="bt" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="submit" value="4" name="bt" />
-                    </td>
-                    <td>
-                        <input type="submit" value="5" name="bt" />
-                    </td>
-                    <td>
-                        <input type="submit" value="6" name="bt" />
-                    </td>
-                    <td>
-                        <input type="submit" value="x" name="bt" />
-                    </td>
-                    <td>
-                        <input type="submit" value="c" name="bt" />
+                        <input type="submit" value="+/-" name="bt" class="btn" style="width:40px; height:40px;" />
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="submit" value="1" name="bt" />
+                        <input type="submit" value="4" name="bt" class="btn" style="width:40px; height:40px;"/>
                     </td>
                     <td>
-                        <input type="submit" value="2" name="bt" />
+                        <input type="submit" value="5" name="bt" class="btn" style="width:40px; height:40px;"/>
                     </td>
                     <td>
-                        <input type="submit" value="3" name="bt" />
+                        <input type="submit" value="6" name="bt" class="btn" style="width:40px; height:40px;"/>
                     </td>
                     <td>
-                        <input type="submit" value="-" name="bt" />
+                        <input type="submit" value="x" name="bt" class="btn" style="width:40px; height:40px;"/>
+                    </td>
+                    <td>
+                        <input type="submit" value="c" name="bt" class="btn" style="width:40px; height:40px; background-color:lightgreen"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="1" name="bt" class="btn" style="width:40px; height:40px;"/>
+                    </td>
+                    <td>
+                        <input type="submit" value="2" name="bt" class="btn" style="width:40px; height:40px;"/>
+                    </td>
+                    <td>
+                        <input type="submit" value="3" name="bt" class="btn" style="width:40px; height:40px;"/>
+                    </td>
+                    <td>
+                        <input type="submit" value="-" name="bt" class="btn" style="width:40px; height:40px;"/>
                     </td>
                     <td rowspan="2" > 
-                        <input type="submit" value="=" name="bt" id=" bt1"/>
+                        <input type="submit" value="=" name="bt" id=" bt1" class="btn" style="height:100%; width:40px"/>
                     </td>
                 <tr>
                     <td colspan="2">
-                        <input type="submit" value="0" name="bt" />
+                        <input type="submit" value="0" name="bt" class="btn" style="width:85px; height:40px;"/>
                     </td>
                     <td>
-                        <input type="submit" value="," name="bt" />
+                        <input type="submit" value="," name="bt" class="btn" style="width:40px; height:40px;"/>
                     </td>
                     <td>
-                        <input type="submit" value="+" name="bt" />
+                        <input type="submit" value="+" name="bt" class="btn" style="width:40px; height:40px;"/>
                     </td>
                  </tr>
             </table>
